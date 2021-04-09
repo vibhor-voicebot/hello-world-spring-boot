@@ -12,10 +12,10 @@ variables:
 
 stages:
 - stage: Build
-  displayName: Build stage
+  displayName: Build stage Maven Package and Publish Artifacts
   jobs:
   - job: MavenPackageAndPublishArtifacts
-  displayName: Maven Package and Publish Artifacts
+
   pool:
     vmImage: $(vmImageName)
 
