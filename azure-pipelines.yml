@@ -64,9 +64,9 @@ stages:
         deploy:
           steps:
           - task: AzureWebApp@1
-            displayName: 'Azure Web App Deploy: {{ webAppName }}'
+            displayName: 'Azure Web App Deploy: sredev'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
-              appName: $(webAppName)
+              appName: sredev
               package: '$(Pipeline.Workspace)/drop/**/target/*.?(war|jar)'
