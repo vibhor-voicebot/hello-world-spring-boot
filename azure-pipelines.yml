@@ -68,5 +68,5 @@ stages:
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
-              appName: sredevVM
+              #appName: sredev
               package: '$(Pipeline.Workspace)/drop/**/target/*.?(war|jar)'
