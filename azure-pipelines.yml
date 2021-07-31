@@ -12,7 +12,7 @@ variables:
   azureSubscription: 'genpact-sredev'
 
   # Web app name
-  webAppName: 'sredev'
+  webAppName: 'sredevVM'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -64,7 +64,7 @@ stages:
         deploy:
           steps:
           - task: AzureWebApp@1
-            displayName: 'Azure Web App Deploy: sredev'
+            displayName: 'Azure Web App Deploy: sredevVM'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
