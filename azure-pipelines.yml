@@ -56,7 +56,9 @@ stages:
   jobs:
   - deployment: DeployLinuxWebApp
     displayName: Deploy Linux Web App
-    environment: dev
+    environment: 
+      name: dev
+      resourceType: VirtualMachine
     pool:
       vmImage: $(vmImageName)
     strategy:
@@ -68,5 +70,5 @@ stages:
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
-              appName: sredev
+              appName: sredevVM
               package: '$(Pipeline.Workspace)/drop/**/target/*.?(war|jar)'
