@@ -56,9 +56,9 @@ stages:
   jobs:
   - deployment: DeployLinuxWebApp
     displayName: Deploy Linux Web App
-    environment: 
-      name: dev
-      resourceType: VirtualMachine
+    environment: dev
+      #name: dev
+      #resourceType: VirtualMachine
     pool:
       vmImage: $(vmImageName)
     strategy:
