@@ -12,7 +12,7 @@ variables:
   azureSubscription: 'genpact-sredev'
 
   # Web app name
-  webAppName: 'sredevvm'
+  webAppName: 'sredevappservice'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -66,9 +66,9 @@ stages:
         deploy:
           steps:
           - task: AzureWebApp@1
-            displayName: 'Azure Web App Deploy: sredevVM'
+            displayName: 'Azure Web App Deploy: sredevappservice'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
-              appName: sredevvm
+              appName: sredevappservice
               package: '$(Pipeline.Workspace)/drop/**/target/*.?(war|jar)'
