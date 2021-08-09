@@ -12,7 +12,7 @@ variables:
   azureSubscription: 'genpact-sredev'
 
   # Web app name
-  webAppName: 'finopsservice'
+  webAppName: 'finopservice'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -70,5 +70,5 @@ stages:
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
-              appName: finopsservice
+              appName: finopservice
               package: '$(Pipeline.Workspace)/drop/**/target/*.?(war|jar)'
