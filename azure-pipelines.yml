@@ -9,10 +9,10 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'fin18arm'
+  azureSubscription: 'fin19arm'
 
   # Web app name
-  webAppName: 'fin18service'
+  webAppName: 'fin19service'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
