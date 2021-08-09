@@ -9,10 +9,10 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  #azureSubscription: 'genpact-sredev'
+  azureSubscription: 'fin17arm'
 
   # Web app name
-  webAppName: 'fin16service'
+  webAppName: 'fin17service'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -66,9 +66,9 @@ stages:
         deploy:
           steps:
           - task: AzureWebApp@1
-            displayName: 'Azure Web App Deploy: sredevappservice'
+            displayName: 'Azure Web App Deployment'
             inputs:
-              #azureSubscription: $(azureSubscription)
+              azureSubscription: $(azureSubscription)
               appType: webAppLinux
-              appName: fin16service
+              appName: $(webAppName)
               package: '$(Pipeline.Workspace)/drop/**/target/*.?(war|jar)'
